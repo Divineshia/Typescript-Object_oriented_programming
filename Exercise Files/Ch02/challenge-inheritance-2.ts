@@ -21,3 +21,39 @@ export class User {
         return this.email === email;
     }
 }
+
+//Create an Admin class that extends User.
+export class Admin extends User{
+    constructor(firstName: string, lastName: string,email: string){
+        super();
+        this.firstName=firstName;
+        this.lastName =lastName;
+        this.email = email;
+    }
+    
+
+}
+
+//Create a Guest class that implements User.
+export class Guest implements User{
+    firstName: string;
+    lastName: string;
+    email: string;
+
+    constructor(firstName: string, lastName: string,email: string){
+        this.firstName=firstName;
+        this.lastName =lastName;
+        this.email = email;
+    }
+    get fullName(): string {
+        return `${this.lastName} ${this.firstName} `;
+        
+    }
+    doesEmailMatch(email: string): boolean {
+        return this.email === email;
+    }
+
+}
+
+const guest1 = new Guest();
+const admin = new Admin('David','Eliza','david@gmail.com');

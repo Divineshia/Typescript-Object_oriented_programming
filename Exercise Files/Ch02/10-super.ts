@@ -11,6 +11,9 @@ export class Animal {
 }
 
 export class Cat extends Animal {
+    constructor(data:{age: number, legs: number, name: string}){
+        super(data.age, data.legs, data.name);
+    }
     meow(): string {
         return 'MEOW! HISS! HISS!';
     }
@@ -25,3 +28,6 @@ export class Dog implements Animal {
         return 'WOOF! WOOF! WOOF!';
     }
 }
+
+const dog = new Dog();
+const cat = new Cat ({age:13, legs:4, name:'kitty'});
