@@ -14,6 +14,8 @@ To use these exercise files, you must have the following installed:
        
 Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
 
-#Branches
+# Branches
+
 Main - All code with Excercise files are available
+
 branch- solutions ---This branch contains solution for all excercises practiced.
