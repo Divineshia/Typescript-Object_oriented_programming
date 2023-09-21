@@ -1,5 +1,5 @@
 export class Animal {
-    age: number;
+    protected age: number;
     legs: number;
     name: string;
 
@@ -10,12 +10,20 @@ export class Animal {
     }
 }
 
+//Child
 export class Cat extends Animal {
     constructor(data: { age: number, legs: number, name: string }) {
         super(data.age, data.legs, data.name);
     }
+    get birthday():number{
+        return this.age+1;
+    }
 }
 
+const cat1= new Cat({age:4 , legs:4, name:'peaches'});
+cat1.age;
+
+//Shape
 export class Dog implements Animal {
     age: number;
     legs: number;
